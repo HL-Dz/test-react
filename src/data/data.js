@@ -1,8 +1,8 @@
 let users = [
-  {id: 1, name: 'Dzmitry', surname: 'Hlushak', age: 30},
-  {id: 2, name: 'Dzmitry', surname: 'Duboyski', age: 30},
-  {id: 3, name: 'Dzmitry', surname: 'Kot', age: 30},
-  {id: 4, name: 'Kristina', surname: 'Kuzavko', age: 24},
+  {id: 1, name: 'John', surname: 'Doe', age: 30},
+  {id: 2, name: 'Alan', surname: 'Carrol', age: 30},
+  {id: 3, name: 'Alex', surname: 'Webster', age: 30},
+  {id: 4, name: 'Samanta', surname: 'Sagal', age: 24},
 ];
 
 

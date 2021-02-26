@@ -4,11 +4,16 @@ import { Users } from './Users/Users.jsx';
 import { AddColorForm } from './AddColorForm/AddColorForm.jsx';
 
 
+const logColor = (title,color) => {
+  console.log(`New Color: ${title} | ${color}`);
+}
+
+
 const App = ({users}) => (
   <>
     <Header title='Project managment'/>
     <Users users={users}/>
-    <AddColorForm/>
+    <AddColorForm onNewColor={logColor}/>
   </>
 );
 
