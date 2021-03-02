@@ -15,7 +15,7 @@ const App = ({users}) => (
     <Header title='Project managment'/>
     <Users users={users}/>
     <AddColorForm onNewColor={logColor}/>
-    <StarRating totalStars={5}/>
+    <StarRating totalStars={5} starsSelected={3}/>
   </>
 );
 
