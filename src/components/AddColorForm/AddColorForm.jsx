@@ -15,7 +15,7 @@ const AddColorForm = ({onNewColor = f => f}) => {
   let _title, _color;
   const submit  = async (e) => {
     e.preventDefault();
-    await delay(1000);
+    // await delay(1000);
     onNewColor(_title.value, _color.value);
     _title.value = '';
     _color.value = '#000000';

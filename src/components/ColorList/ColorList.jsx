@@ -14,9 +14,9 @@ const ColorList = ({colors = []}) =>
     }
   </div>;
 
-// ColorList.propTypes = {
-//   colors: PropTypes.array
-// }
+ColorList.propTypes = {
+  colors: PropTypes.array
+}
 
 
 export { ColorList };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './User.scss';
 
 const User = ({name, surname, age}) => 
   <li className="user__item">
