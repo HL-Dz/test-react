@@ -34,6 +34,8 @@ class App extends Component {
     }
 
     this.addColor = this.addColor.bind(this);
+    this.rateColor = this.rateColor.bind(this);
+    this.removeColor = this.removeColor.bind(this);
   }
 
   addColor(title,color) {
@@ -49,16 +51,38 @@ class App extends Component {
     this.setState({colors});
   }
 
+  rateColor(id, rating){
+    const colors = this.state.colors.map(color => 
+      (color.id !== id) ? 
+        color : 
+        {
+          ...color,
+          rating
+        }
+    )
+    this.setState({colors})
+  }
+
+  removeColor(id){
+    const colors = this.state.colors.filter(color=> color.id !== id);
+
+    this.setState({colors});
+  }
+
   render() {
     const { colors } = this.state;
     const { users } = this.props;
+    const { addColor, rateColor, removeColor } = this;
 
     return (
       <>
         <Header title='Project managment'/>
         <Users users={users}/>
-        <AddColorForm onNewColor={this.addColor}/>
-        <ColorList colors={colors}/>
+        <AddColorForm onNewColor={addColor}/>
+        <ColorList  colors={colors}
+                    onRate={rateColor}
+                    onRemove={removeColor}
+        />
       </>
     )
   }
