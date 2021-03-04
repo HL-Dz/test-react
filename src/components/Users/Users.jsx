@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { getUsers } from '../../api/getUsers.js';
+import { delay } from '../../helpers/settings.js';
 import { User } from './User/User.jsx';
 import './Users.scss';
 
@@ -16,7 +17,8 @@ class Users extends Component {
   componentWillMount(){
     this.setState({loading: true})
     getUsers()
-      .then(users  =>  {
+      .then(async users  =>  {
+        await delay(2000);
         this.setState({users, loading: false})
       },
       error => {
