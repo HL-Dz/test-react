@@ -77,7 +77,8 @@ class App extends Component {
     return (
       <>
         <Header title='Project managment'/>
-        <Users users={users}/>
+        {/* <Users users={users}/> */}
+        <Users />
         <AddColorForm onNewColor={addColor}/>
         <ColorList  colors={colors}
                     onRate={rateColor}
