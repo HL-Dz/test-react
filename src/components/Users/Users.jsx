@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { getUsers } from '../../api/getUsers.js';
 import { delay } from '../../helpers/settings.js';
+import { Loader } from '../loaders/Loader.jsx';
 import { User } from './User/User.jsx';
 import './Users.scss';
 
