@@ -10,7 +10,7 @@
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 2px;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 
   &:last-child {
     margin-right: 0;
@@ -24,6 +24,9 @@
 .color__title {
   max-width: 230px;
   text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
 }
 
 .color__remove {

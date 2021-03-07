@@ -15,11 +15,11 @@ class Users extends Component {
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.setState({loading: true})
     getUsers()
       .then(async users  =>  {
-        await delay(2000);
+        await delay(3000);
         this.setState({users, loading: false})
       },
       error => {
@@ -35,7 +35,7 @@ class Users extends Component {
       <div className="users">
         <h1 className="users__title">Users</h1>
         {(loading) ? 
-          <span>Loading users...</span> : 
+          <Loader /> : 
           (users.length) ? 
             <ul className="users__list">
               {users.map((user, i) => 
