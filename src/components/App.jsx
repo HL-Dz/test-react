@@ -4,6 +4,10 @@ import { Header } from './Header/Header.jsx';
 import { Users } from './Users/Users.jsx';
 import { AddColorForm } from './AddColorForm/AddColorForm.jsx';
 import { ColorList } from './ColorList/ColorList.jsx';
+import { DataComponent } from '../hoc/DataComponent.jsx';
+
+
+const RandomUsers = DataComponent(Users, 'https://jsonplaceholder.typicode.com/users');
 
 
 
@@ -77,7 +81,7 @@ class App extends Component {
     return (
       <>
         <Header title='Project managment'/>
-        <Users />
+        <RandomUsers/>
         <AddColorForm onNewColor={addColor}/>
         <ColorList  colors={colors}
                     onRate={rateColor}
