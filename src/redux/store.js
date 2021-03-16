@@ -1,8 +1,8 @@
-const constants = {
+const C = {
   ADD_COLOR: 'ADD_COLOR',
-  SORT_COLOR: 'SORT_COLOR',
   RATE_COLOR: 'RATE_COLOR',
-  REMOVE_COLOR: 'REMOVE_COLOR'
+  REMOVE_COLOR: 'REMOVE_COLOR',
+  SORT_COLORS: 'SORT_COLORS'
 }
 
 
@@ -26,5 +26,53 @@ export let store = {
       "color": "#ff0000",
       "rating": "0"
     }
-  ]
+  ],
+  sort: "SORT_BY_DATE"
+};
+
+
+const colorReducer = (state={}, action) => {
+  switch(action.type) {
+    case C.ADD_COLOR:
+      return {
+        id: action.id,
+        title: action.title,
+        color: action.color,
+        raging: 0
+      }
+    case C.RATE_COLOR:
+      return (state.id !== action.id) ? 
+        state : 
+        {
+          ...state,
+          rating: action.rating
+        }
+    default:
+      return state
+  }
+};
+
+const colorsReducer = (state=[], action) => {
+  switch(action.type) {
+    case C.ADD_COLOR:
+      return [
+        ...state,
+        colorReducer({}, action)
+      ]
+    case C.RATE_COLOR:
+      return state.map(color => colorReducer(color, action))
+    case C.REMOVE_COLOR:
+      return state.filter(color => color.id !== action.id);
+    default:
+      return state
+  }
+}
+
+const sortReducer = (state='SORT_BY_DATE', action) => {
+  switch(action.type) {
+    case C.SORT_COLORS:
+      return action.sortBy
+    default:
+      return state
+  }
 };
