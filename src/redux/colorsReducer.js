@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 const ADD_COLOR = 'ADD_COLOR';
 const RATE_COLOR = 'RATE_COLOR';
 const REMOVE_COLOR = 'REMOVE_COLOR';
@@ -68,6 +70,25 @@ const colorsReducer = (state = initialState, action) => {
       return state
   }
 };
+
+
+export const addColor = (title,color) => ({
+  type: ADD_COLOR,
+  id: v4(),
+  title,
+  color
+});
+
+export const removeColor = (id) => ({
+  type: REMOVE_COLOR,
+  id
+});
+
+export const rateColor = (id, rating) => ({
+  type: RATE_COLOR,
+  id,
+  rating
+})
 
 
 export default colorsReducer;
