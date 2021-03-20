@@ -30,8 +30,6 @@ class Color extends Component {
   componentDidUpdate(prevProps) {
     const {title,rating} = this.props;
     const status = (rating > prevProps.rating) ? 'better' : 'worse';
-    // this.titleRef.style.backgroundColor = "";
-    // this.titleRef.style.color = "black";
     console.log(status);
   }
 

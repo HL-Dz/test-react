@@ -75,7 +75,6 @@ class App extends Component {
 
   render() {
     const { colors } = this.state;
-    const { users } = this.props;
     const { addColor, rateColor, removeColor } = this;
 
     return (

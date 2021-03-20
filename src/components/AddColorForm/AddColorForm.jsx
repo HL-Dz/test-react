@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './AddColorForm.scss';
-import { delay } from '../../helpers/settings';
-import { Loader } from '../loaders/Loader.jsx';
 
 
-const AddColorForm = ({onNewColor = f => f}) => {
+const AddColorForm = ({onNewColor}) => {
   let _title, _color;
   const submit  = async (e) => {
     e.preventDefault();

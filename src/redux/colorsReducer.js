@@ -76,7 +76,8 @@ export const addColor = (title,color) => ({
   type: ADD_COLOR,
   id: v4(),
   title,
-  color
+  color,
+  rating: 0
 });
 
 export const removeColor = (id) => ({
