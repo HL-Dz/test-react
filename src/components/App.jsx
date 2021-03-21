@@ -4,6 +4,7 @@ import { Header } from './Header/Header.jsx';
 import { Users } from './Users/Users.jsx';
 import { DataComponent } from '../hoc/DataComponent.jsx';
 import { AddColorContainer } from './AddColorForm/AddColorContainer.jsx';
+import { ColorsContainer } from './ColorList/ColorsContainer.jsx';
 
 
 const RandomUsers = DataComponent(Users, 'https://jsonplaceholder.typicode.com/users');
@@ -96,6 +97,7 @@ const App = (props) => {
       <Header title='Project managment'/>
       <RandomUsers/>
       <AddColorContainer/>
+      <ColorsContainer/>
     </>
   )
 }

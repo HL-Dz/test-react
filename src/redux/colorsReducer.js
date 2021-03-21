@@ -54,7 +54,7 @@ const colorsReducer = (state = initialState, action) => {
     case ADD_COLOR:
       return {
         ...state,
-        colors: [...state.colors, colorReducer({}, action)]
+        colors: [colorReducer({}, action), ...state.colors]
       }
     case RATE_COLOR:
       return {
