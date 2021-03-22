@@ -1,4 +1,5 @@
 import React from 'react';
+import './pages.scss';
 
 
 export const Home = () => 
@@ -26,3 +27,8 @@ export const Contact = () =>
   <section className="contact">
     <h1 className="section__title">[Contact]</h1>
   </section>
+
+export const Error404 = ({location}) => 
+  <div className="error404">
+    <h1>Resource not found at  <span className="error404__elem">{location.pathname}</span></h1>
+  </div>
