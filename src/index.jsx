@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import "./scss/main.scss";
 import { App } from './components/App.jsx';
 import { addColor, rateColor, removeColor} from './redux/colorsReducer';
+import { HashRouter } from 'react-router-dom';
 
 
 const { render } = ReactDOM;
@@ -14,8 +15,10 @@ store.subscribe(() =>
 )
 
 render(
-  <Provider store={store}>
-    <App/>
-  </Provider>,
+  <HashRouter>
+    <Provider store={store}>
+      <App/>
+    </Provider>
+  </HashRouter>,
   document.getElementById('react-container')
 )
