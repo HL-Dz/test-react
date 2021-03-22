@@ -1,0 +1,14 @@
+.navigation {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav__link {
+  padding: 10px;
+  text-decoration: none;
+}

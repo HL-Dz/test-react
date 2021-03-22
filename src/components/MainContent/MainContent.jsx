@@ -7,10 +7,10 @@ import './MainContent.scss';
 const MainContent = () => (
   <main className="main">
     <Route path="/" exact component={Home}/>
-    <Route path="/about" exact component={About}/>
-    <Route path="/events" exact component={Events}/>
-    <Route path="/products" exact component={Products}/>
-    <Route path="/contact" exact component={Contact}/>
+    <Route path="/about" component={About}/>
+    <Route path="/events" component={Events}/>
+    <Route path="/products" component={Products}/>
+    <Route path="/contact" component={Contact}/>
   </main>
 );
 
