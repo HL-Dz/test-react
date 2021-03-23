@@ -1,6 +1,8 @@
 .navigation {
-  max-width: 700px;
+  width: 100%;
   margin: 0 auto;
+  background: rgb(26, 26, 39);
+  margin-bottom: 20px;
 }
 
 .nav {
@@ -12,4 +14,6 @@
   padding: 10px;
   font-size: 20px;
   text-decoration: none;
+  color: #fff;
+  transition: background-color 0.5s ease;
 }
