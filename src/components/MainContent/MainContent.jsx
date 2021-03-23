@@ -5,16 +5,14 @@ import './MainContent.scss';
 
 
 const MainContent = () => (
-  <main className="main">
-    <Switch>
-      <Route path="/" exact component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/events" component={Events}/>
-      <Route path="/products" component={Products}/>
-      <Route path="/contact" component={Contact}/>
-      <Route component={Error404}/>
-    </Switch>
-  </main>
+  <Switch>
+    <Route path="/" exact component={Home}/>
+    <Route path="/about" component={About}/>
+    <Route path="/events" component={Events}/>
+    <Route path="/products" component={Products}/>
+    <Route path="/contact" component={Contact}/>
+    <Route component={Error404}/>
+  </Switch>
 );
 
 export default MainContent;
