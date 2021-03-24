@@ -1,8 +1,16 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
 .navigation {
   width: 100%;
   margin: 0 auto;
   background: rgb(26, 26, 39);
-  margin-bottom: 20px;
 }
 
 .nav {
@@ -16,4 +24,37 @@
   text-decoration: none;
   color: #fff;
   transition: background-color 0.5s ease;
+}
+
+.about {
+  display: flex;
+}
+
+.about-menu {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a27;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.about__item {
+  list-style: none;
+}
+
+.about__link {
+  display: block;
+  font-size: 20px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.company,
+.services,
+.history,
+.location {
+  width: 100%;
+  text-align: center;
 }
